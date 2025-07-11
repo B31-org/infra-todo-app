@@ -19,6 +19,7 @@ module "azure_rg_dev" {
 module "azure_rg_dev1" {
   source   = "../../modules/azure_rg"
   rg       = "vishalrg_dev1"
+  location = "east us"
 }
 # rg-prod created
 
