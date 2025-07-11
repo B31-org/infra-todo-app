@@ -14,6 +14,15 @@ module "azure_rg_dev" {
 
 }
 
+# rg-prod created
+
+module "azure_rg_prod" {
+  source   = "../../modules/azure_rg"
+  rg       = "vishalrg_prod"
+  location = "east us"
+
+}
+
 module "azure_vnet" {
   depends_on    = [module.azure_rg]
   source        = "../../modules/azure_vnet"
