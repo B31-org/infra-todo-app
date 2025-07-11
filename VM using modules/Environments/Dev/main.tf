@@ -14,6 +14,15 @@ module "azure_rg_dev" {
 
 }
 
+# rg-dev1 created
+
+module "azure_rg_dev1" {
+  source   = "../../modules/azure_rg"
+  rg       = "vishalrg_dev1"
+  location = "east us"
+
+}
+
 module "azure_vnet" {
   depends_on    = [module.azure_rg]
   source        = "../../modules/azure_vnet"
