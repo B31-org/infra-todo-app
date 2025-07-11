@@ -5,6 +5,15 @@ module "azure_rg" {
 
 }
 
+# rg-dev created
+
+module "azure_rg_dev" {
+  source   = "../../modules/azure_rg"
+  rg       = "vishalrg_dev"
+  location = "east us"
+
+}
+
 module "azure_vnet" {
   depends_on    = [module.azure_rg]
   source        = "../../modules/azure_vnet"
